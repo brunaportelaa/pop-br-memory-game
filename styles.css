@@ -1,0 +1,89 @@
+body {
+    background-image: url(./images/bg.png);
+    height: 100vh;
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.choose-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fed2ff;
+    width: 60%;
+}
+
+
+h1 {
+    margin:0;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+}
+
+.logo {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+
+}
+
+.windows-tab {
+    background-color: #bc39ad;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-btn{
+    height: 25px;
+}
+
+.windows-tab-body {
+    background-color: #fed2ff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.level {
+    width: 30%;
+    /* border: 1px solid #bc39ad; */
+    text-align: center;
+    font-size: 30px;
+    color: #6d1e64;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.card {
+    width: 150px;
+    height:150px;
+    background-image: url(./images/glitter.gif);
+    background-size: cover;
+    margin: 10px;
+
+}
