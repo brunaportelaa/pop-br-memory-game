@@ -18,6 +18,49 @@ function buildTile(img) {
     element.classList.add('card')
     element.style.backgroundImage = `url(${img})`
     element.innerHTML = '<img src="../images/glitter.gif" style="width:100%">'
+
+    element.addEventListener('click', () => {
+        if (awaitingEndOfMove) {
+            return
+        }
+        
+        element.innerHTML = ''
+
+        if (!activeCard) {
+            activeCard = element
+            return
+        } 
+
+
+        const divaToMatch = activeCard.style.backgroundImage
+        console.log(divaToMatch)
+        console.log(`url(${img})`)
+
+        if (divaToMatch === `url("${img}")`) {
+            awaitingEndOfMove = false
+            activeCard = null
+            revealedCount += 2
+            console.log('you have a match!!!!')
+
+            if (revealedCount === cardCount) {
+                alert('You win! Refresh to play again')
+            }
+
+            return
+        }
+        
+
+        awaitingEndOfMove = true
+
+        setTimeout(() => {
+            element.innerHTML = '<img src="../images/glitter.gif" style="width:100%">'
+            activeCard.innerHTML = '<img src="../images/glitter.gif" style="width:100%">'
+            awaitingEndOfMove = false
+            activeCard = null
+        }, 1000)
+
+    }) 
+
     return element
 }
 
