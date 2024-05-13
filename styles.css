@@ -75,8 +75,12 @@ h1 {
     flex-direction: column;
 }
 
-.row {
-    display: flex;
+.cards {
+    margin: 48px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 16px;
 }
 
 .card {
@@ -84,6 +88,6 @@ h1 {
     height:150px;
     background-image: url(./images/glitter.gif);
     background-size: cover;
-    margin: 10px;
+    cursor: pointer;
 
 }
